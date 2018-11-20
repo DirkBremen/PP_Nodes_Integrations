@@ -126,13 +126,25 @@
             return paypal
                 .request
                 .post('/doexpresscheckcout', nvpParams)
-                .then(handleResponse);
+                .then(function (result) {
+                    //handleResponse
+                    if (result.ACK === 'Success') {
+                        handleResponse;
+                    } else {
+                        handle10486(data, actions);
+                    }
+                });
 
 
             // END PART 3
         }
 
-
+        //insufficient funds error message
+        function handle10486(data, actions) {
+            // PART 1: Finish the 10486 recovery function
+            // Use the correct action to relaunch the paypal flow.
+            return actions.restart();
+        }
 
 
     </script>
