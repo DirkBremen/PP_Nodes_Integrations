@@ -1,0 +1,2 @@
+npm install --save paypal-rest-sdk express ejs
+npm install nodemon -g

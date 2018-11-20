@@ -1,0 +1,2 @@
+npm install --save express ejs paypal-nvp-api
+npm install nodemon -g
