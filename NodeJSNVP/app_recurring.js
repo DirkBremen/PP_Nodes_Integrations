@@ -51,7 +51,7 @@ app.post('/pay', (req, res) => {
 app.get('/success', (req, res) => {
     const payerId = req.query.PayerID;
     //recurring payment
-    let query = {
+    query = {
         'PROFILEREFERENCE': 'RPInvoice123',
         'PROFILESTARTDATE': '2018-11-17T14:30:00Z',
         'SUBSCRIBERNAME': 'Mr Sub Scriber',
